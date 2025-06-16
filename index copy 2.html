@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Weronika's Mission Control</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: black;
+      background: transparent;
       color: white;
       box-sizing: border-box;
     }
@@ -55,7 +57,8 @@
       font-size: 1.6rem;
     }
 
-    .sidebar p, .sidebar li {
+    .sidebar p,
+    .sidebar li {
       font-size: 0.95rem;
       line-height: 1.5;
       opacity: 0.9;
@@ -78,6 +81,7 @@
       border-radius: 4px;
       text-decoration: none;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .sidebar a:hover {
@@ -142,10 +146,14 @@
 
     .theme-blue .theme-toggle button:hover:first-child {
       background-color: #00ccff;
+      border: 1px solid transparent;
+      color: #333;
     }
 
     .theme-purple .theme-toggle button:hover:last-child {
       background-color: #cc66ff;
+      border: 1px solid transparent;
+      color: #333;
     }
 
     .theme-toggle button:active {
@@ -189,188 +197,210 @@
       opacity: 0.85;
       margin-bottom: 1.5rem;
     }
+
     .theme-purple .text-box {
-      background-color: #330b47; /* soft gray box, adjust as needed */
-      border-left: 4px solid #160a2e; /* accent color on the side */
-      padding: 12px;
-      margin-bottom: 12px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-    }
-    .theme-blue .text-box {
-      background-color: #0b3b31; /* soft gray box, adjust as needed */
-      border-left: 4px solid #042129; /* accent color on the side */
+      background-color: #330b47;
+      /* soft gray box, adjust as needed */
+      border-left: 4px solid #160a2e;
+      /* accent color on the side */
       padding: 12px;
       margin-bottom: 12px;
       border-radius: 8px;
       font-size: 0.95rem;
     }
 
+    .theme-blue .text-box {
+      background-color: #0b3b31;
+      /* soft gray box, adjust as needed */
+      border-left: 4px solid #042129;
+      /* accent color on the side */
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
+
 <body class="theme-blue">
-<canvas id="stars"></canvas>
-<div class="theme-toggle">
-  <button onclick="setTheme('theme-blue')">Blue</button>
-  <button onclick="setTheme('theme-purple')">Purple</button>
-</div>
-<div class="layout">
-  <div class="sidebar">
-    <h2>Weronika Sioda</h2>
-    <p>App & Blockchain Developer | IB Student | Visionary | Life Player 🥰</p>
-    <p>_______</p>
-    <div class="text-box">
-      <p>Creator of BrainAce.pro, SwipeU, and Auria — building the future of smart learning and finance.</p>
-    </div>
-    <div class="text-box">
-      <p>Dedicated to fighting the societal dopamine addiction and creating the space for unique kids to develop and not be destroyed by the system.</p>
-    </div>
-    <h3>Info 📝</h3>
-    <ul>
-      <li>Age: 16 Years Old</li>
-      <li>School: II Liceum Ogólnokształcące im. <b>Stefana Batorego</b> w Warszawie</li>
-      <li>Country: Poland; Konstancin-Jeziorna</li>
-      <li>Field: Tech, AI, Education</li>
-      <li>Languages: English, Polish, French</li>
-    </ul>
-
-    <h3>Links 🔗</h3>
-    <a href="https://www.instagram.com/werasi_chess/">Instagram</a>
-    <a href="https://github.com/BrainTrainApp2023">GitHub</a>
-    <a href="https://www.facebook.com/profile.php?id=61554329807100">Facebook</a>
-    <a href="https://www.linkedin.com/in/weronika-sioda-ba4711309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
-    <a href="https://chatgpt.com/g/g-67b88e075a7481918d551b92c47147ba-weronika-sioda">ChatGPT</a>
-    <a href="https://www.youtube.com/@WeronikaSioda">YouTube</a>
+  <canvas id="stars"></canvas>
+  <div class="theme-toggle">
+    <button onclick="setTheme('theme-blue')">Blue</button>
+    <button onclick="setTheme('theme-purple')">Purple</button>
   </div>
-  <div class="main-content">
-    <h1>Countdown to $1M 🎉</h1>
-    <div class="subheading">August 18, 2025</div>
-    <div class="countdown" id="countdown">Loading...</div>
-    <div class="clock" id="clock">Current time: --:--:--</div>
+  <div class="layout">
+    <div class="sidebar">
+      <h2>Weronika Sioda</h2>
+      <p>App & Blockchain Developer | IB Student | Visionary | Life Player 🥰</p>
+      <p>_______</p>
+      <div class="text-box">
+        <p>Creator of BrainAce.pro, SwipeU, and Auria — building the future of smart learning and finance.</p>
+      </div>
+      <div class="text-box">
+        <p>Dedicated to fighting the societal dopamine addiction and creating the space for unique kids to develop and
+          not be destroyed by the system.</p>
+      </div>
+      <h3>Info 📝</h3>
+      <ul>
+        <li>Age: 16 Years Old</li>
+        <li>School: II Liceum Ogólnokształcące im. <b>Stefana Batorego</b> w Warszawie</li>
+        <li>Country: Poland; Konstancin-Jeziorna</li>
+        <li>Field: Tech, AI, Education</li>
+        <li>Languages: English, Polish, French</li>
+      </ul>
 
-    <div class="goal">
-      <div class="goal-title">💸 Income Goal</div>
-      <div class="progress-container"><div class="progress-bar" id="incomeBar"></div></div>
-      <div class="progress-text" id="incomeText"></div>
+      <h3>Links 🔗</h3>
+      <a href="https://www.instagram.com/werasi_chess/">Instagram</a>
+      <a href="https://github.com/BrainTrainApp2023">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61554329807100">Facebook</a>
+      <a
+        href="https://www.linkedin.com/in/weronika-sioda-ba4711309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+      <a href="https://chatgpt.com/g/g-67b88e075a7481918d551b92c47147ba-weronika-sioda">ChatGPT</a>
+      <a href="https://www.youtube.com/@WeronikaSioda">YouTube</a>
+    </div>
+    <div class="main-content">
+      <h1>Countdown to $1M 🎉</h1>
+      <div class="subheading">August 18, 2025</div>
+      <div class="countdown" id="countdown">Loading...</div>
+      <div class="clock" id="clock">Current time: --:--:--</div>
 
-      <div class="goal-title">📱 Social Media Followers</div>
-      <div class="progress-container"><div class="progress-bar" id="followersBar"></div></div>
-      <div class="progress-text" id="followersText"></div>
+      <div class="goal">
+        <div class="goal-title">💸 Income Goal</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="incomeBar"></div>
+        </div>
+        <div class="progress-text" id="incomeText"></div>
 
-      <div class="goal-title">⚖️ Weight Loss</div>
-      <div class="progress-container"><div class="progress-bar" id="weightBar"></div></div>
-      <div class="progress-text" id="weightText"></div>
+        <div class="goal-title">📱 Social Media Followers</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="followersBar"></div>
+        </div>
+        <div class="progress-text" id="followersText"></div>
 
-      <div class="goal-title">⏰ Wake Up at 4:30 Every Day</div>
-      <div class="progress-container"><div class="progress-bar" id="wakeupBar"></div></div>
-      <div class="progress-text" id="wakeupText"></div>
+        <div class="goal-title">⚖️ Weight Loss</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="weightBar"></div>
+        </div>
+        <div class="progress-text" id="weightText"></div>
 
-      <div class="goal-title">📚 Study 2h Daily</div>
-      <div class="progress-container"><div class="progress-bar" id="studyBar"></div></div>
-      <div class="progress-text" id="studyText"></div>
+        <div class="goal-title">⏰ Wake Up at 4:30 Every Day</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="wakeupBar"></div>
+        </div>
+        <div class="progress-text" id="wakeupText"></div>
 
-      <div class="goal-title">💘 Good Deed Every Day</div>
-      <div class="progress-container"><div class="progress-bar" id="loveBar"></div></div>
-      <div class="progress-text" id="loveText"></div>
+        <div class="goal-title">📚 Study 2h Daily</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="studyBar"></div>
+        </div>
+        <div class="progress-text" id="studyText"></div>
+
+        <div class="goal-title">💘 Good Deed Every Day</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="loveBar"></div>
+        </div>
+        <div class="progress-text" id="loveText"></div>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  const goals = [
-    { id: 'income', current: 50000, total: 1000000, text: 'Progress: $50,000 / $1,000,000' },
-    { id: 'followers', current: 700, total: 10000, text: 'Progress: 700 / 10,000 followers' },
-    { id: 'weight', current: 2, total: 5, text: 'Progress: 2kg lost / 5kg' },
-    { id: 'wakeup', current: 5, total: 30, text: 'Progress: 5 days in a row' },
-    { id: 'study', current: 10, total: 30, text: 'Progress: 10 days out of 30' },
-    { id: 'love', current: 10, total: 60, text: 'Manifesting... 20%' },
-  ];
+  <script>
+    const goals = [
+      { id: 'income', current: 50000, total: 1000000, text: 'Progress: $50,000 / $1,000,000' },
+      { id: 'followers', current: 700, total: 10000, text: 'Progress: 700 / 10,000 followers' },
+      { id: 'weight', current: 2, total: 5, text: 'Progress: 2kg lost / 5kg' },
+      { id: 'wakeup', current: 5, total: 30, text: 'Progress: 5 days in a row' },
+      { id: 'study', current: 10, total: 30, text: 'Progress: 10 days out of 30' },
+      { id: 'love', current: 10, total: 60, text: 'Manifesting... 20%' },
+    ];
 
-  goals.forEach(goal => {
-    const percent = Math.min((goal.current / goal.total) * 100, 100).toFixed(1);
-    const bar = document.getElementById(goal.id + 'Bar');
-    const text = document.getElementById(goal.id + 'Text');
-    setTimeout(() => {
-      bar.style.width = percent + '%';
-    }, 300);
-    text.textContent = `${goal.text} (${percent}%)`;
-  });
-
-  const targetDate = new Date("August 18, 2025 00:00:00").getTime();
-  const countdownEl = document.getElementById("countdown");
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-    if (distance < 0) {
-      countdownEl.innerHTML = "Mission Time Reached!";
-      return;
-    }
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-
-  function updateClock() {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString();
-    document.getElementById("clock").textContent = `Current time: ${timeString}`;
-  }
-  setInterval(updateClock, 1000);
-  updateClock();
-
-  function setTheme(theme) {
-    document.body.className = theme;
-  }
-
-  // Star field background
-  const canvas = document.getElementById("stars");
-  const ctx = canvas.getContext("2d");
-  let stars = [];
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
-
-  for (let i = 0; i < 100; i++) {
-    stars.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 1.5,
-      d: Math.random() * 0.5 + 0.2
+    goals.forEach(goal => {
+      const percent = Math.min((goal.current / goal.total) * 100, 100).toFixed(1);
+      const bar = document.getElementById(goal.id + 'Bar');
+      const text = document.getElementById(goal.id + 'Text');
+      setTimeout(() => {
+        bar.style.width = percent + '%';
+      }, 300);
+      text.textContent = `${goal.text} (${percent}%)`;
     });
-  }
 
-  function drawStars() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
-    stars.forEach(star => {
-      ctx.beginPath();
-      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-      ctx.fill();
-    });
-    updateStars();
-  }
-
-  function updateStars() {
-    stars.forEach(star => {
-      star.y += star.d;
-      if (star.y > canvas.height) {
-        star.y = 0;
-        star.x = Math.random() * canvas.width;
+    const targetDate = new Date("August 18, 2025 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if (distance < 0) {
+        countdownEl.innerHTML = "Mission Time Reached!";
+        return;
       }
-    });
-  }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-  function animate() {
-    drawStars();
-    requestAnimationFrame(animate);
-  }
-  animate();
-</script>
+    function updateClock() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      document.getElementById("clock").textContent = `Current time: ${timeString}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    // Star field background
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    let stars = [];
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.style.backgroundColor = "black";
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    for (let i = 0; i < 100; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.5,
+        d: Math.random() * 0.5 + 0.2
+      });
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      updateStars();
+    }
+
+    function updateStars() {
+      stars.forEach(star => {
+        star.y += star.d;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      });
+    }
+
+    function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
 </body>
+
 </html>
